@@ -11,7 +11,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let scrollView = UIScrollView()
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+        ])
+        
+        let imageView = UIImageView(image: UIImage(named: "big_brother.jpg"))
+        
     }
 
 
